@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "bbiotec:clump_of_proteins"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "bbiotec:proteins"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "bbiotec:proteins"
+    },
+    {
+      "item": "minecraft:bread"
+    },
+    {
+      "item": "bbiotec:glucose_syrup"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "bbiotec:barbeque_sandwich"
+  }
+}
