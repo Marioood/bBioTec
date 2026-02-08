@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "bbiotec:block/eviscerator_front",
+    "side": "bbiotec:block/eviscerator",
+    "top": "bbiotec:block/eviscerator_top"
+  }
+}

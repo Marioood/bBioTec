@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "bbiotec:block/intestine_top",
-    "side": "bbiotec:block/intestine"
-  }
-}

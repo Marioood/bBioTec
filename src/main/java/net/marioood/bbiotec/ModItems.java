@@ -21,7 +21,13 @@ public class ModItems {
 
   public static final RegistryObject<Item> GLUCOSE_SYRUP =
           ITEMS.register("glucose_syrup", () -> new Item(new Item.Properties().food(ModFoodProperties.GLUCOSE_SYRUP)));
-    
+
+  public static final RegistryObject<Item> RAW_URANIUM =
+          ITEMS.register("raw_uranium", () -> new Item(new Item.Properties()));
+
+  public static final RegistryObject<Item> URANIUM_INGOT =
+          ITEMS.register("uranium_ingot", () -> new Item(new Item.Properties()));
+
   public static void register(IEventBus eventBus) {
     ITEMS.register(eventBus);
   }

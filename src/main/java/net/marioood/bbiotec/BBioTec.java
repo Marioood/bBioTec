@@ -1,7 +1,11 @@
 package net.marioood.bbiotec;
 
 import com.mojang.logging.LogUtils;
+import net.marioood.bbiotec.entity.ModBlockEntities;
+import net.marioood.bbiotec.screen.EvisceratorScreen;
+import net.marioood.bbiotec.screen.ModMenuTypes;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
@@ -50,6 +54,9 @@ public class BBioTec
         
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
+
         modEventBus.addListener(this::addCreative);
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -75,6 +82,20 @@ public class BBioTec
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.INTESTINE);
             event.accept(ModBlocks.CLUMP_OF_PROTEINS);
+            event.accept(ModBlocks.CLUMP_OF_LIPIDS);
+            event.accept(ModBlocks.SKIN);
+            event.accept(ModBlocks.GIANT_FLOWER_STEM);
+            event.accept(ModBlocks.GIANT_THORN);
+
+            event.accept(ModBlocks.EVISCERATOR);
+            event.accept(ModBlocks.IRRADIATOR);
+            event.accept(ModBlocks.URANIUM_ORE);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.COLORED_BLOCKS) {
+            event.accept(ModBlocks.RED_PETAL_BLOCK);
+            event.accept(ModBlocks.YELLOW_PETAL_BLOCK);
+            event.accept(ModBlocks.LIGHT_GRAY_PETAL_BLOCK);
         }
     }
 
@@ -91,6 +112,7 @@ public class BBioTec
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+            MenuScreens.register(ModMenuTypes.EVISCERATOR.get(), EvisceratorScreen::new);
         }
     }
 }

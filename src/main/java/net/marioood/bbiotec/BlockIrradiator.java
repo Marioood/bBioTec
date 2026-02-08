@@ -30,7 +30,7 @@ public class BlockIrradiator extends Block {
     }*/
 
     @Override
-    protected void randomTick(BlockState pState, ServerLevel pLevel, BlockPos pPos, RandomSource pRandom) {
+    protected void tick(BlockState pState, ServerLevel pLevel, BlockPos pPos, RandomSource pRandom) {
         boolean neighborsWater = true;
         for(int x = -1; x <= 1; x++) {
             for(int z = -1; z <= 1; z++) {
