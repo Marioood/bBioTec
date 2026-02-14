@@ -15,6 +15,9 @@ public class ModBlockEntities {
     public static final RegistryObject<BlockEntityType<BlockEvisceratorEntity>> EVISCERATOR =
             BLOCK_ENTITIES.register("eviscerator_be", () -> BlockEntityType.Builder.of(BlockEvisceratorEntity::new, ModBlocks.EVISCERATOR.get()).build(null));
 
+    public static final RegistryObject<BlockEntityType<BlockIrradiatorEntity>> IRRADIATOR =
+            BLOCK_ENTITIES.register("irradiator_be", () -> BlockEntityType.Builder.of(BlockIrradiatorEntity::new, ModBlocks.IRRADIATOR.get()).build(null));
+
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);
     }

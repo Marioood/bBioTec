@@ -1,7 +1,9 @@
 package net.marioood.bbiotec.screen;
 
+import net.marioood.bbiotec.ModItems;
 import net.marioood.bbiotec.entity.BlockEvisceratorEntity;
 import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.world.Container;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -9,9 +11,11 @@ import net.minecraft.world.inventory.CrafterSlot;
 import net.minecraft.world.inventory.NonInteractiveResultSlot;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.items.SlotItemHandler;
+import org.jetbrains.annotations.NotNull;
 
 public class EvisceratorMenu extends AbstractContainerMenu {
     public final BlockEvisceratorEntity daddy;
@@ -29,16 +33,47 @@ public class EvisceratorMenu extends AbstractContainerMenu {
         addPlayerSlots(inv);
         addSlot(new SlotItemHandler(daddy.inventory, 0, 26, 35));
 
-        addSlot(new SlotItemHandler(daddy.inventory, 1, 118, 26));
-        addSlot(new SlotItemHandler(daddy.inventory, 1, 136, 26));
-        addSlot(new SlotItemHandler(daddy.inventory, 1, 118, 44));
-        addSlot(new SlotItemHandler(daddy.inventory, 1, 136, 44));
+        addSlot(new SlotItemHandler(daddy.inventory, 1, 118, 26) {
+            @Override
+            public boolean mayPlace(@NotNull ItemStack stack) {
+                return false;
+            }
+        });
+        addSlot(new SlotItemHandler(daddy.inventory, 2, 136, 26) {
+            @Override
+            public boolean mayPlace(@NotNull ItemStack stack) {
+                return false;
+            }
+        });
+        addSlot(new SlotItemHandler(daddy.inventory, 3, 118, 44) {
+            @Override
+            public boolean mayPlace(@NotNull ItemStack stack) {
+                return false;
+            }
+        });
+        addSlot(new SlotItemHandler(daddy.inventory, 4, 136, 44) {
+            @Override
+            public boolean mayPlace(@NotNull ItemStack stack) {
+                return false;
+            }
+        });
     }
 
     @Override
     public ItemStack quickMoveStack(Player pPlayer, int pIndex) {
         return null;
     }
+
+    /*@Override
+    public void slotsChanged(Container pContainer) {
+        if(pContainer.getItem(0) == null) return;
+
+        if(pContainer.getItem(0).is(Items.APPLE)) {
+            daddy.inventory.setStackInSlot(1, new ItemStack(ModItems.CELLULOSE.get()));
+            daddy.inventory.setStackInSlot(1, new ItemStack(ModItems.GLUCOSE_SYRUP.get()));
+        }
+        super.slotsChanged(pContainer);
+    }*/
 
     @Override
     public boolean stillValid(Player pPlayer) {

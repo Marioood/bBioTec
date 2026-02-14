@@ -3,19 +3,12 @@ package net.marioood.bbiotec;
 import com.mojang.logging.LogUtils;
 import net.marioood.bbiotec.entity.ModBlockEntities;
 import net.marioood.bbiotec.screen.EvisceratorScreen;
+import net.marioood.bbiotec.screen.IrradiatorScreen;
 import net.marioood.bbiotec.screen.ModMenuTypes;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.MenuScreens;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -28,9 +21,6 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -73,6 +63,9 @@ public class BBioTec
             event.accept(ModItems.CELLULOSE);
             event.accept(ModItems.PROTEINS);
             event.accept(ModItems.GLUCOSE_SYRUP);
+            event.accept(ModItems.RAW_URANIUM);
+            event.accept(ModItems.URANIUM_INGOT);
+            event.accept(ModItems.SAFETY_SHEARS);
         }
 
         if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
@@ -83,19 +76,36 @@ public class BBioTec
             event.accept(ModBlocks.INTESTINE);
             event.accept(ModBlocks.CLUMP_OF_PROTEINS);
             event.accept(ModBlocks.CLUMP_OF_LIPIDS);
-            event.accept(ModBlocks.SKIN);
+            event.accept(ModBlocks.LIGHT_SKIN);
+            event.accept(ModBlocks.SAND_SKIN);
+            event.accept(ModBlocks.HONEY_SKIN);
+            event.accept(ModBlocks.DARK_SKIN);
+            event.accept(ModBlocks.DECOMPOSING_SKIN);
             event.accept(ModBlocks.GIANT_FLOWER_STEM);
+            event.accept(ModBlocks.GIANT_LEAF);
+            event.accept(ModBlocks.GIANT_SEED);
             event.accept(ModBlocks.GIANT_THORN);
+            event.accept(ModBlocks.TENDRILDENDRON);
 
             event.accept(ModBlocks.EVISCERATOR);
             event.accept(ModBlocks.IRRADIATOR);
             event.accept(ModBlocks.URANIUM_ORE);
+            event.accept(ModBlocks.RAW_URANIUM_BLOCK);
+            event.accept(ModBlocks.URANIUM_BLOCK);
         }
 
         if(event.getTabKey() == CreativeModeTabs.COLORED_BLOCKS) {
-            event.accept(ModBlocks.RED_PETAL_BLOCK);
-            event.accept(ModBlocks.YELLOW_PETAL_BLOCK);
+            event.accept(ModBlocks.WHITE_PETAL_BLOCK);
             event.accept(ModBlocks.LIGHT_GRAY_PETAL_BLOCK);
+            event.accept(ModBlocks.BLACK_PETAL_BLOCK);
+            event.accept(ModBlocks.RED_PETAL_BLOCK);
+            event.accept(ModBlocks.ORANGE_PETAL_BLOCK);
+            event.accept(ModBlocks.YELLOW_PETAL_BLOCK);
+            event.accept(ModBlocks.LIGHT_BLUE_PETAL_BLOCK);
+            event.accept(ModBlocks.BLUE_PETAL_BLOCK);
+            event.accept(ModBlocks.PURPLE_PETAL_BLOCK);
+            event.accept(ModBlocks.MAGENTA_PETAL_BLOCK);
+            event.accept(ModBlocks.PINK_PETAL_BLOCK);
         }
     }
 
@@ -113,6 +123,8 @@ public class BBioTec
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             MenuScreens.register(ModMenuTypes.EVISCERATOR.get(), EvisceratorScreen::new);
+            MenuScreens.register(ModMenuTypes.IRRADIATOR.get(), IrradiatorScreen::new);
+            //ItemBlockRenderTypes.setRenderLayer(ModBlocks.GIANT_THORN.get(), RenderType.cutout());
         }
     }
 }

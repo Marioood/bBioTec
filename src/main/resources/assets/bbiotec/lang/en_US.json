@@ -1,25 +1,45 @@
 {
   "item.bbiotec.cellulose": "Cellulose",
   "item.bbiotec.proteins": "Proteins",
+  "item.bbiotec.lipids": "Lipids",
   "item.bbiotec.glucose_syrup": "Glucose Syrup",
   "item.bbiotec.barbeque_sandwich": "Barbeque Sandwich",
+  "item.bbiotec.safety_shears": "Safety Shears",
 
   "block.bbiotec.uranium_ore": "Enriched Blackstone",
   "block.bbiotec.raw_uranium_block": "Raw Uranium Block",
-  "block.bbiotec.raw_uranium": "Raw Uranium",
-  "block.bbiotec.uranium_ingot": "Uranium Ingot",
+  "item.bbiotec.raw_uranium": "Raw Uranium",
+  "item.bbiotec.uranium_ingot": "Uranium Ingot",
+  "block.bbiotec.irradiator": "Irradiator",
+  "block.bbiotec.irradiator.tooltip": "Requires water cooling while in use.",
 
   "block.bbiotec.intestine": "Intestine",
   "block.bbiotec.clump_of_proteins": "Muscle Tissue",
   "block.bbiotec.clump_of_lipids": "Clump of Lipids",
-  "block.bbiotec.skin": "Skin",
+  "block.bbiotec.light_skin": "Light Skin",
+  "block.bbiotec.sand_skin": "Sand-colored Skin",
+  "block.bbiotec.honey_skin": "Honey-colored Skin",
+  "block.bbiotec.dark_skin": "Dark Skin",
+  "block.bbiotec.decomposing_skin": "Decomposing Skin",
+  "block.bbiotec.tendrildendron": "Tendrildendron Sapling",
 
   "block.bbiotec.giant_flower_stem": "Giant Flower Stem",
+  "block.bbiotec.giant_leaf": "Giant Leaf",
   "block.bbiotec.giant_thorn": "Giant Thorn",
+  "block.bbiotec.giant_seed": "Giant Seed",
+  "block.bbiotec.mutant_dandelion": "Mutant Dandelion",
 
   "block.bbiotec.red_petal_block": "Red Petal Block",
+  "block.bbiotec.orange_petal_block": "Orange Petal Block",
   "block.bbiotec.yellow_petal_block": "Yellow Petal Block",
+  "block.bbiotec.light_blue_petal_block": "Light Blue Petal Block",
+  "block.bbiotec.blue_petal_block": "Blue Petal Block",
+  "block.bbiotec.purple_petal_block": "Purple Petal Block",
+  "block.bbiotec.magenta_petal_block": "Magenta Petal Block",
+  "block.bbiotec.pink_petal_block": "Pink Petal Block",
+  "block.bbiotec.black_petal_block": "Black Petal Block",
   "block.bbiotec.light_gray_petal_block": "Light Gray Petal Block",
+  "block.bbiotec.white_petal_block": "White Petal Block",
 
   "item.minecraft.sugar": "Cane Sugar"
 }

@@ -15,6 +15,9 @@ public class ModMenuTypes {
     public static final RegistryObject<MenuType<EvisceratorMenu>> EVISCERATOR =
             MENUS.register("eviscerator_menu", () -> IForgeMenuType.create(EvisceratorMenu::new));
 
+    public static final RegistryObject<MenuType<IrradiatorMenu>> IRRADIATOR =
+            MENUS.register("irradiator_menu", () -> IForgeMenuType.create(IrradiatorMenu::new));
+
     public static void register(IEventBus eventBus) {
         MENUS.register(eventBus);
     }

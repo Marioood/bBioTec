@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "bbiotec:block/giant_leaf_inset",
+    "east": "bbiotec:block/giant_leaf",
+    "north": "bbiotec:block/giant_leaf_inset",
+    "particle": "bbiotec:block/giant_leaf_inset",
+    "south": "bbiotec:block/giant_leaf_inset",
+    "up": "bbiotec:block/giant_leaf_inset",
+    "west": "bbiotec:block/giant_leaf"
+  }
+}

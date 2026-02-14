@@ -1,0 +1,43 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "bbiotec:giant_seed",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "type": 0
+              }
+            }
+          ],
+          "name": "minecraft:poppy"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "bbiotec:giant_seed",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "type": 1
+              }
+            }
+          ],
+          "name": "minecraft:dandelion"
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "bbiotec:blocks/giant_seed"
+}

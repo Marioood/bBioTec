@@ -21,13 +21,28 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.CLUMP_OF_PROTEINS.get());
         blockWithItem(ModBlocks.CLUMP_OF_LIPIDS.get());
-        blockWithItem(ModBlocks.SKIN.get());
+        blockWithItem(ModBlocks.LIGHT_SKIN.get());
+        blockWithItem(ModBlocks.SAND_SKIN.get());
+        blockWithItem(ModBlocks.HONEY_SKIN.get());
+        blockWithItem(ModBlocks.DARK_SKIN.get());
+        blockWithItem(ModBlocks.DECOMPOSING_SKIN.get());
+
+        blockWithItem(ModBlocks.GIANT_SEED.get());
 
         blockWithItem(ModBlocks.RED_PETAL_BLOCK.get());
+        blockWithItem(ModBlocks.ORANGE_PETAL_BLOCK.get());
         blockWithItem(ModBlocks.YELLOW_PETAL_BLOCK.get());
+        blockWithItem(ModBlocks.LIGHT_BLUE_PETAL_BLOCK.get());
+        blockWithItem(ModBlocks.BLUE_PETAL_BLOCK.get());
+        blockWithItem(ModBlocks.PURPLE_PETAL_BLOCK.get());
+        blockWithItem(ModBlocks.MAGENTA_PETAL_BLOCK.get());
+        blockWithItem(ModBlocks.PINK_PETAL_BLOCK.get());
+        blockWithItem(ModBlocks.WHITE_PETAL_BLOCK.get());
         blockWithItem(ModBlocks.LIGHT_GRAY_PETAL_BLOCK.get());
+        blockWithItem(ModBlocks.BLACK_PETAL_BLOCK.get());
 
         blockWithItem(ModBlocks.URANIUM_ORE.get());
+        blockWithItem(ModBlocks.URANIUM_BLOCK.get());
 
         logBlockWithItem(ModBlocks.INTESTINE);
         logBlockWithItem(ModBlocks.GIANT_FLOWER_STEM);
@@ -37,10 +52,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     private void blockWithItem(Block block) {
         simpleBlockWithItem(block, cubeAll(block));
-    }
-
-    private void blockItem(Block block) {
-        simpleBlockItem(block, cubeAll(block));
     }
 
     private void logBlockWithItem(RegistryObject<RotatedPillarBlock> reg) {

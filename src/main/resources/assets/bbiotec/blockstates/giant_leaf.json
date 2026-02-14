@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "bbiotec:block/giant_leaf",
+      "y": 90
+    },
+    "axis=y": {
+      "model": "bbiotec:block/giant_leaf",
+      "x": 90,
+      "z": 270
+    },
+    "axis=z": {
+      "model": "bbiotec:block/giant_leaf"
+    }
+  }
+}
