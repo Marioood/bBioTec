@@ -3,12 +3,15 @@ package net.marioood.bbiotec;
 import net.marioood.bbiotec.block.*;
 import net.marioood.bbiotec.saplinggen.MutantDandelionGenerator;
 import net.marioood.bbiotec.saplinggen.TendrildendronGenerator;
+import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -42,32 +45,6 @@ public class ModBlocks {
     public static final RegistryObject<Block> DECOMPOSING_SKIN = registerBlock("decomposing_skin",
             () -> new Block(BlockBehaviour.Properties.of().strength(0.25f).sound(SoundType.FROGLIGHT)));
 
-    public static final RegistryObject<ModSaplingBlock> TENDRILDENDRON = registerBlock("tendrildendron",
-            () -> new ModSaplingBlock(
-                    new TendrildendronGenerator(),
-                    BlockBehaviour.Properties.of()
-                            .sound(SoundType.SLIME_BLOCK)
-                            .noCollission()
-                            .randomTicks()
-                            .instabreak()
-                            .pushReaction(PushReaction.DESTROY)
-                            .noOcclusion()
-            ));
-
-    public static final RegistryObject<ModSaplingBlock> MUTANT_DANDELION = registerBlock("mutant_dandelion",
-            () -> new ModSaplingBlock(
-                    new MutantDandelionGenerator(),
-                    BlockBehaviour.Properties.of()
-                            .sound(SoundType.GRASS)
-                            .noCollission()
-                            .randomTicks()
-                            .instabreak()
-                            .pushReaction(PushReaction.DESTROY)
-                            .noOcclusion()
-            ));
-
-
-
     public static final RegistryObject<Block> IRRADIATOR = registerBlock("irradiator",
             () -> new BlockIrradiator(BlockBehaviour.Properties.of().strength(2f).sound(SoundType.METAL)));
 
@@ -95,6 +72,14 @@ public class ModBlocks {
                             .strength(5.0F, 6.0F)
                             .sound(SoundType.METAL)
             ));
+    public static final RegistryObject<Block> MISSING_TILES = registerBlock("missing_tiles",
+            () -> new Block(
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.STONE)
+                            .requiresCorrectToolForDrops()
+                            .strength(1.6F, 6.0F)
+                            .sound(SoundType.STONE)
+            ));
 
 
 
@@ -107,6 +92,17 @@ public class ModBlocks {
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.of().strength(0.125f).sound(SoundType.GRASS)));
     public static final RegistryObject<BlockGiantSeed> GIANT_SEED = registerBlock("giant_seed",
             () -> new BlockGiantSeed(BlockBehaviour.Properties.of().strength(4f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> DANDELION_FLUFF = registerBlock("dandelion_fluff",
+            () -> new Block(BlockBehaviour.Properties.of().
+                    strength(0.125f)
+                    .noOcclusion()
+                    .sound(SoundType.WOOL)
+            ) {
+                @Override
+                protected int getLightBlock(BlockState pState, BlockGetter pLevel, BlockPos pPos) {
+                    return 1;
+                }
+            });
 
     public static final RegistryObject<Block> RED_PETAL_BLOCK = registerBlock("red_petal_block",
             () -> new Block(BlockBehaviour.Properties.of().strength(0.125f).sound(SoundType.WOOL)));
@@ -140,6 +136,31 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> BLACK_PETAL_BLOCK = registerBlock("black_petal_block",
             () -> new Block(BlockBehaviour.Properties.of().strength(0.125f).sound(SoundType.WOOL)));
+
+    //must be at bottom, because some mod blocks are accessed in the constructors for these
+    public static final RegistryObject<ModSaplingBlock> TENDRILDENDRON = registerBlock("tendrildendron",
+            () -> new ModSaplingBlock(
+                    new TendrildendronGenerator(),
+                    BlockBehaviour.Properties.of()
+                            .sound(SoundType.SLIME_BLOCK)
+                            .noCollission()
+                            .randomTicks()
+                            .instabreak()
+                            .pushReaction(PushReaction.DESTROY)
+                            .noOcclusion()
+            ));
+
+    public static final RegistryObject<ModSaplingBlock> MUTANT_DANDELION = registerBlock("mutant_dandelion",
+            () -> new ModSaplingBlock(
+                    new MutantDandelionGenerator(),
+                    BlockBehaviour.Properties.of()
+                            .sound(SoundType.GRASS)
+                            .noCollission()
+                            .randomTicks()
+                            .instabreak()
+                            .pushReaction(PushReaction.DESTROY)
+                            .noOcclusion()
+            ));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

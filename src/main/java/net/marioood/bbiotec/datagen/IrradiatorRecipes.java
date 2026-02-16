@@ -26,6 +26,14 @@ public class IrradiatorRecipes {
             new ItemStack(ModBlocks.GIANT_FLOWER_STEM.get()),
             Blocks.POPPY, 4
         );
+        register(
+            new ItemStack(ModBlocks.MUTANT_DANDELION.get()),
+            Blocks.DANDELION, 4
+        );
+        register(
+            new ItemStack(ModBlocks.MISSING_TILES.get(), 8),
+            Blocks.STONE_BRICKS, 4
+        );
     }
 
     private static void register(ItemStack output, Object... ingredients) {

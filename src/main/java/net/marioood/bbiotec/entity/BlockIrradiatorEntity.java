@@ -2,6 +2,7 @@ package net.marioood.bbiotec.entity;
 
 import net.marioood.bbiotec.ModBlocks;
 import net.marioood.bbiotec.ModItems;
+import net.marioood.bbiotec.block.BlockIrradiator;
 import net.marioood.bbiotec.datagen.IrradiatorRecipes;
 import net.marioood.bbiotec.screen.IrradiatorMenu;
 import net.minecraft.core.BlockPos;
@@ -119,12 +120,17 @@ public class BlockIrradiatorEntity extends BlockEntity implements MenuProvider {
 
         if(hasRecipe()) {
             progress++;
-            setChanged(level, pos, blockState);
+
+            if(!blockState.getValue(BlockIrradiator.ACTIVE)) {
+                level.setBlock(pos, blockState.setValue(BlockIrradiator.ACTIVE, true), 3);
+            }
 
             if(progress >= maxProgress) {
                 craftItem();
                 progress = 0;
+                level.setBlock(pos, blockState.setValue(BlockIrradiator.ACTIVE, false), 3);
             }
+            setChanged(level, pos, blockState);
 
             if(level.random.nextInt(60) > 0)
                 return;

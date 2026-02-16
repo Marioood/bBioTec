@@ -28,6 +28,7 @@
   "block.bbiotec.giant_thorn": "Giant Thorn",
   "block.bbiotec.giant_seed": "Giant Seed",
   "block.bbiotec.mutant_dandelion": "Mutant Dandelion",
+  "block.bbiotec.dandelion_fluff": "Dandelion Fluff",
 
   "block.bbiotec.red_petal_block": "Red Petal Block",
   "block.bbiotec.orange_petal_block": "Orange Petal Block",
@@ -40,6 +41,8 @@
   "block.bbiotec.black_petal_block": "Black Petal Block",
   "block.bbiotec.light_gray_petal_block": "Light Gray Petal Block",
   "block.bbiotec.white_petal_block": "White Petal Block",
+  
+  "block.bbiotec.missing_tiles": "Missing Tiles",
 
   "item.minecraft.sugar": "Cane Sugar"
 }

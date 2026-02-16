@@ -62,6 +62,7 @@ public class BBioTec
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.CELLULOSE);
             event.accept(ModItems.PROTEINS);
+            event.accept(ModItems.LIPIDS);
             event.accept(ModItems.GLUCOSE_SYRUP);
             event.accept(ModItems.RAW_URANIUM);
             event.accept(ModItems.URANIUM_INGOT);
@@ -92,6 +93,9 @@ public class BBioTec
             event.accept(ModBlocks.URANIUM_ORE);
             event.accept(ModBlocks.RAW_URANIUM_BLOCK);
             event.accept(ModBlocks.URANIUM_BLOCK);
+            event.accept(ModBlocks.MISSING_TILES);
+            event.accept(ModBlocks.DANDELION_FLUFF);
+            event.accept(ModBlocks.MUTANT_DANDELION);
         }
 
         if(event.getTabKey() == CreativeModeTabs.COLORED_BLOCKS) {

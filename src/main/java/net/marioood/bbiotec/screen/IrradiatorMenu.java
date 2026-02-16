@@ -59,6 +59,9 @@ public class IrradiatorMenu extends AbstractContainerMenu {
 
         return progress > 0 ? progress * arrowWidth / maxProgress : 0;
     }
+    public double getFxProgress(float partialTick) {
+        return (data.get(0) + partialTick) / (double)data.get(1);
+    }
 
     @Override
     public ItemStack quickMoveStack(Player pPlayer, int pIndex) {

@@ -43,8 +43,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         blockWithItem(ModBlocks.URANIUM_ORE.get());
         blockWithItem(ModBlocks.URANIUM_BLOCK.get());
+        blockWithItem(ModBlocks.MISSING_TILES.get());
 
         logBlockWithItem(ModBlocks.INTESTINE);
+
         logBlockWithItem(ModBlocks.GIANT_FLOWER_STEM);
         logBlockWithItem(ModBlocks.RAW_URANIUM_BLOCK);
 

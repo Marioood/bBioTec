@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "active=true": {
+      "model": "bbiotec:block/irradiator_active"
+    },
+    "active=false": {
+      "model": "bbiotec:block/irradiator_inactive"
+    }
+  }
+}

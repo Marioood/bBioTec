@@ -9,7 +9,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 
 public class TendrildendronGenerator extends ModTreeGenerator {
-    public void generate(ServerLevel pLevel, BlockPos pPos, BlockState pState) {
+    public void generate(ServerLevel pLevel, BlockPos pPos) {
         //wavy rounded cylinder (aka COCK)
         Block[] skinColors = {
                 ModBlocks.LIGHT_SKIN.get(),

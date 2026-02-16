@@ -47,6 +47,23 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         safetyShears(out, Items.HONEY_BOTTLE, ModItems.GLUCOSE_SYRUP.get(), 4);
         safetyShears(out, Blocks.HONEY_BLOCK, ModItems.GLUCOSE_SYRUP.get(), 16);
 
+        safetyShears(out, Items.POISONOUS_POTATO, ModItems.CELLULOSE.get(), 1);
+
+        safetyShears(out, Items.COOKED_BEEF, ModItems.PROTEINS.get(), 1);
+        safetyShears(out, Items.BEEF, ModItems.PROTEINS.get(), 1);
+        safetyShears(out, Items.COOKED_CHICKEN, ModItems.PROTEINS.get(), 1);
+        safetyShears(out, Items.CHICKEN, ModItems.PROTEINS.get(), 1);
+        safetyShears(out, Items.COOKED_MUTTON, ModItems.PROTEINS.get(), 1);
+        safetyShears(out, Items.MUTTON, ModItems.PROTEINS.get(), 1);
+        safetyShears(out, Items.COOKED_RABBIT, ModItems.PROTEINS.get(), 1);
+        safetyShears(out, Items.RABBIT, ModItems.PROTEINS.get(), 1);
+        safetyShears(out, Items.COOKED_COD, ModItems.PROTEINS.get(), 1);
+        safetyShears(out, Items.COOKED_SALMON, ModItems.PROTEINS.get(), 1);
+        safetyShears(out, Items.SALMON, ModItems.PROTEINS.get(), 1);
+        safetyShears(out, Items.COD, ModItems.PROTEINS.get(), 1);
+        safetyShears(out, Items.TROPICAL_FISH, ModItems.PROTEINS.get(), 1);
+        safetyShears(out, Items.PUFFERFISH, ModItems.PROTEINS.get(), 1);
+        safetyShears(out, Items.ROTTEN_FLESH, ModItems.PROTEINS.get(), 1);
         safetyShears(out, Blocks.BROWN_MUSHROOM, ModItems.PROTEINS.get(), 1);
         safetyShears(out, Blocks.RED_MUSHROOM, ModItems.PROTEINS.get(), 1);
         safetyShears(out, Items.EGG, ModItems.PROTEINS.get(), 1);

@@ -61,7 +61,7 @@ public class ModSaplingBlock extends BushBlock implements BonemealableBlock {
         if (pState.getValue(STAGE) == 0) {
             pLevel.setBlock(pPos, pState.cycle(STAGE), 4);
         } else {
-            treeGenerator.generate(pLevel, pPos, pState);
+            treeGenerator.generate(pLevel, pPos);
         }
     }
 

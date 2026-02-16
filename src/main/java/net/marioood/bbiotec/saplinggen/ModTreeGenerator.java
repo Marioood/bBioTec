@@ -5,5 +5,5 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.block.state.BlockState;
 
 public abstract class ModTreeGenerator {
-    public abstract void generate(ServerLevel pLevel, BlockPos pPos, BlockState pState);
+    public abstract void generate(ServerLevel pLevel, BlockPos pPos);
 }

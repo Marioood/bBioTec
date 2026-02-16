@@ -47,6 +47,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.GIANT_LEAF.get());
         dropSelf(ModBlocks.GIANT_THORN.get());
         dropSelf(ModBlocks.MUTANT_DANDELION.get());
+        dropSelf(ModBlocks.DANDELION_FLUFF.get());
 
         add(ModBlocks.URANIUM_ORE.get(),
                 block -> createOreDrop(ModBlocks.URANIUM_ORE.get(), ModItems.RAW_URANIUM.get()));
@@ -62,6 +63,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
         dropSelf(ModBlocks.RAW_URANIUM_BLOCK.get());
         dropSelf(ModBlocks.URANIUM_BLOCK.get());
+        dropSelf(ModBlocks.MISSING_TILES.get());
 
         dropSelf(ModBlocks.IRRADIATOR.get());
         dropSelf(ModBlocks.EVISCERATOR.get());

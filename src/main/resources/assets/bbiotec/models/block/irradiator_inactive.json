@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "bbiotec:block/irradiator_bottom",
+    "east": "bbiotec:block/irradiator_side_inactive",
+    "north": "bbiotec:block/irradiator_side_inactive",
+    "particle": "bbiotec:block/irradiator_side_inactive",
+    "south": "bbiotec:block/irradiator_side_inactive",
+    "up": "bbiotec:block/irradiator_top_inactive",
+    "west": "bbiotec:block/irradiator_side_inactive"
+  }
+}
